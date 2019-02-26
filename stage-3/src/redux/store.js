@@ -1,4 +1,8 @@
 import reducer from './reducer';
 import reduxPromiseMiddleware from 'redux-promise-middleware';
+import {createStore, applyMiddleware} from 'redux'
 
-export default createStore(reducer, applyMiddleware(reduxPromiseMiddleware()));
+const Store = createStore(reducer, applyMiddleware(reduxPromiseMiddleware()));
+
+export default Store
+
